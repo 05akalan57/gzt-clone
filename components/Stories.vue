@@ -1,6 +1,6 @@
 <template>
   <div>
-    <swiper :slides-per-view="8" :navigation="true">
+    <swiper :slides-per-view="8" :slidesPerGroup="8" :spaceBetween="12" :navigation="true">
       <swiper-slide>
         <img src="https://img.piri.net/piri/upload/3/2021/12/14/3bf93aaa-6mnoq3mo5hbufyc5r34hs.jpeg" class="h-44 w-28 object-cover rounded" />
       </swiper-slide>
