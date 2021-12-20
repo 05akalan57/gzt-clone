@@ -2,7 +2,7 @@ export default {
   meta: {
     title: 'Yeni nesil sosyal içerik platformu | GZT',
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
       {
         name: 'description',
         content:
@@ -10,7 +10,7 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: 'logo.png' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',

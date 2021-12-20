@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col space-y-4 pt-4 pb-4 text-white overflow-auto">
+  <div class="flex flex-col w-full pt-2 pb-2 lg:pt-4 lg:pb-4 space-y-4 overflow-auto">
     <Stories />
     <div class="flex space-x-4">
       <Flow />

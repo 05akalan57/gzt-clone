@@ -1,29 +1,29 @@
 <template>
-  <header class="bg-neutral-800 shadow-md h-14">
-    <div class="flex max-w-screen-xl mx-auto">
-      <NuxtLink to="/" class="flex items-center h-14 w-80">
-        <img src="https://www.gzt.com/_nuxt/img/gzt-logo.b145d81.svg" alt="logo" class="h-8 w-20" />
-      </NuxtLink>
-      <nav class="flex space-x-2 text-gray-300">
-        <NuxtLink to="/" class="flex justify-center items-center h-14 w-16 border-b-2 border-transparent border-blue-400 text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1034 1024" class="h-6">
+  <header class="fixed bottom-0 left-0 right-0 lg:relative block pl-2 pr-2 xl:pl-0 xl:pr-0 bg-neutral-800 shadow-md h-14">
+    <div class="flex h-full max-w-screen-xl mx-auto">
+      <div to="/" class="hidden lg:flex items-center w-60">
+        <img src="https://www.gzt.com/_nuxt/img/gzt-logo.b145d81.svg" alt="logo" class="h-8" />
+      </div>
+      <nav class="flex mx-auto lg:ml-px space-x-2 text-gray-300">
+        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+          <svg width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
             <path
+              d="M17.0469 19.9922H20.375V11.0391L12.875 5.60156L5.375 11.0391V19.9922H8.70312V16.6641C8.70312 16.1172 8.80859 15.5859 9.01953 15.0703C9.23047 14.5547 9.53125 14.1016 9.92188 13.7109C10.3125 13.3203 10.7656 13.0195 11.2812 12.8086C11.7969 12.5977 12.3281 12.4922 12.875 12.4922C13.4219 12.4922 13.9531 12.5977 14.4688 12.8086C14.9844 13.0195 15.4375 13.3203 15.8281 13.7109C16.2188 14.1016 16.5195 14.5547 16.7305 15.0703C16.9414 15.5859 17.0469 16.1172 17.0469 16.6641V19.9922ZM2.86719 10.2891C2.86719 10.1172 2.90625 9.96094 2.98438 9.82031C3.0625 9.67969 3.16406 9.5625 3.28906 9.46875L12.2891 2.92969C12.4609 2.80469 12.6562 2.74219 12.875 2.74219C13.0938 2.74219 13.2891 2.80469 13.4609 2.92969L22.4609 9.46875C22.5859 9.5625 22.6875 9.67969 22.7656 9.82031C22.8438 9.96094 22.8828 10.1172 22.8828 10.2891V21.4922C22.8828 21.7734 22.7852 22.0117 22.5898 22.207C22.3945 22.4023 22.1562 22.5 21.875 22.5H14.5391V16.6641C14.5391 16.4453 14.4961 16.2344 14.4102 16.0312C14.3242 15.8281 14.2031 15.6484 14.0469 15.4922C13.8906 15.3359 13.7109 15.2148 13.5078 15.1289C13.3047 15.043 13.0938 15 12.875 15C12.6562 15 12.4453 15.043 12.2422 15.1289C12.0391 15.2148 11.8594 15.3359 11.7031 15.4922C11.5469 15.6484 11.4258 15.8281 11.3398 16.0312C11.2539 16.2344 11.2109 16.4453 11.2109 16.6641V22.5H3.875C3.59375 22.5 3.35547 22.4023 3.16016 22.207C2.96484 22.0117 2.86719 21.7734 2.86719 21.4922V10.2891Z"
               fill="currentColor"
-              d="M487 125l-384 279q-8 6 -13 15t-5 20v478q0 18 12.5 30.5t30.5 12.5h313v-249q0 -14 5.5 -27t15.5 -23t23 -15.5t27 -5.5t27 5.5t23 15.5t15.5 23t5.5 27v249h313q18 0 30.5 -12.5t12.5 -30.5v-478q0 -11 -5 -20t-13 -15l-384 -279q-11 -8 -25 -8t-25 8v0z"
             />
           </svg>
-        </NuxtLink>
-        <NuxtLink to="/" class="flex justify-center items-center h-14 w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1034 1024" class="h-6">
+        </div>
+        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-6">
             <path
               fill="currentColor"
               d="M192 501q0 60 23 112q22 53 61 92t92 62q52 22 112 22q58 0 109 -21.5t90 -58.5l2 -2l2 -2t2.5 -2t2.5 -2q37 -39 58.5 -90.5t21.5 -109.5q0 -59 -23 -112q-22 -52 -61 -91t-92 -62q-52 -23 -112 -23t-112 23q-53 23 -92 62t-61 91q-23 53 -23 112v0zM719 816
 q-50 37 -111 58.5t-128 21.5q-82 0 -154 -31t-125.5 -84.5t-84.5 -125.5t-31 -154q0 -81 31 -153t84.5 -125.5t125.5 -84.5t154 -31t154 31t125.5 84.5t84.5 125.5t31 153q0 68 -21.5 128.5t-59.5 110.5l150 150q16 16 16 38t-16 38q-15 15 -37 15t-38 -15l-150 -150v0z"
             />
           </svg>
-        </NuxtLink>
-        <NuxtLink to="/" class="flex justify-center items-center h-14 w-20 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-11 0 1301 1024" class="h-6">
+        </div>
+        <div to="/" class="flex justify-center items-center w-20 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-11 0 1301 1024" class="h-6">
             <path
               fill="currentColor"
               d="M978 236q-51 3 -97 21.5t-82 50.5q-3 3 -22 20t-42 38t-52.5 48t-48.5 43q-72 66 -107.5 97.5t-70.5 63.5q-49 45 -57.5 52t-16.5 13q-44 29 -97 29.5t-97 -28.5q-32 -21 -52 -51t-28 -68q-2 -9 -2.5 -14.5t-0.5 -20.5q0 -18 1 -26t4 -22q8 -31 27.5 -59t45.5 -46
@@ -33,9 +33,9 @@ t95.5 44q18 15 31.5 36t21.5 44q22 67 -4.5 132t-88.5 96q-44 21 -92 17.5t-88 -30.5
 t63 27q26 8 56 11t58 0q45 -4 86 -23q41 -18 74 -47t56 -68t34 -85q5 -19 6.5 -33t1.5 -35t-1 -32t-5 -29q-5 -28 -16 -55t-27 -51q-9 -13 -17 -22.5t-20 -22.5q-18 -18 -35 -30t-40 -24q-26 -12 -51 -19t-54 -9q-11 -1 -16.5 -1t-19.5 1v0z"
             />
           </svg>
-        </NuxtLink>
-        <NuxtLink to="/" class="flex justify-center items-center h-14 w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 962 1024" class="h-6">
+        </div>
+        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 962 1024" class="h-6">
             <path
               fill="currentColor"
               d="M438 107q-14 1 -32 3t-34 4q-71 12 -139 43.5t-116 75.5q-47 41 -75.5 92.5t-35.5 106.5q-3 17 -3 32.5t2 32.5q5 49 24.5 93.5t51.5 82.5q18 20 46.5 43.5t54.5 39.5l10.5 7t15.5 11q134 95 192 136.5t60 42.5q7 5 15.5 6.5t16.5 -0.5q13 -2 21.5 -10.5t12.5 -21.5
@@ -46,9 +46,9 @@ q52 -21 111 -29q26 -4 51.5 -5t49.5 0v0zM284 365q-10 2 -18.5 8t-13.5 15t-5 19t5 2
 q4 4 8 6.5t10 4.5l4 2h157h135.5t25.5 -1q20 -6 28 -23.5t0 -35.5q-4 -8 -12.5 -15t-17.5 -9q-2 0 -38.5 -0.5t-120.5 -0.5q-101 1 -129 1t-30 1v0z"
             />
           </svg>
-        </NuxtLink>
-        <NuxtLink to="/" class="flex justify-center items-center h-14 w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1034 1024" class="h-6">
+        </div>
+        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-6">
             <path
               fill="currentColor"
               d="M475 107h87q60 6 116 34t98 77q43 50 68.5 122t25.5 167q0 31 1 54t8 43q6 20 19 41t39 48q10 11 13.5 25.5t-3.5 29.5q-4 15 -17.5 22.5t-27.5 7.5h-767q-8 0 -14.5 -2t-11.5 -6q-6 -4 -10.5 -9.5t-8.5 -12.5q-7 -15 -4 -29.5t14 -25.5q25 -27 38.5 -48t19.5 -41
@@ -56,18 +56,11 @@ t7.5 -43t1.5 -54q0 -95 25 -167t68 -122q43 -49 99 -77t116 -34v0v0zM372 248q-44 29
 M380 826h98v6q0 14 10 25.5t26 11.5q14 0 25 -10t11 -27v-6h107v6q0 58 -40.5 99.5t-98.5 41.5q-57 0 -97.5 -41.5t-40.5 -99.5v-6v0z"
             />
           </svg>
-        </NuxtLink>
+        </div>
       </nav>
-      <div class="flex justify-end ml-auto pt-3 pb-3 h-14 w-64 space-x-2">
-        <div @click="darkMode = !darkMode" class="flex items-center p-2 rounded-full bg-neutral-700/50 text-gray-300 cursor-pointer">
-          <svg
-            v-if="darkMode"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="-10 0 1034 1024"
-            class="h-4"
-          >
+      <div class="hidden lg:flex justify-end items-center w-96 space-x-2">
+        <div @click="darkMode = !darkMode" class="flex items-center justify-center h-8 w-8 rounded-full bg-neutral-700/50 text-gray-300">
+          <svg v-if="darkMode" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-4">
             <path
               fill="currentColor"
               d="M406 108q9 -2 17.5 0t15.5 7v0h1q12 10 13.5 25.5t-8.5 27.5v0q-16 19 -28 41.5t-21 46.5q-8 24 -12 49t-4 51q0 63 23.5 118t64.5 96t96 65t118 24q28 0 54 -5t50 -14v0q25 -9 48 -22.5t43 -30.5l1 -1v0q7 -5 15.5 -7t17.5 0q16 4 23.5 17.5t2.5 29.5q-18 72 -57 133
@@ -75,14 +68,7 @@ t-96 105q-55 44 -123.5 68.5t-143.5 24.5q-44 0 -87 -9q-42 -8 -80.5 -24.5t-73.5 -3
 q0 74 28 138.5t76 112.5q48 49 113 77t138 28q63 0 119 -20.5t101 -56.5v0q26 -20 47.5 -44t39.5 -52l-6 2t-6 3h-1v0q-30 11 -63 17t-67 6q-78 0 -147 -30t-120 -81t-80.5 -120t-29.5 -147q0 -32 5 -63.5t15 -60.5q1 -3 2 -5t1 -4v0z"
             />
           </svg>
-          <svg
-            v-else
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            version="1.1"
-            viewBox="-10 0 1034 1024"
-            class="h-4"
-          >
+          <svg v-else xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-4">
             <path
               fill="currentColor"
               d="M356 378q30 -31 70.5 -48t85.5 -17t85.5 17.5t70.5 47.5q30 29 47.5 69.5t17.5 85.5q0 46 -18 86t-47 70q-30 30 -70.5 47.5t-85.5 17.5t-85.5 -17.5t-70.5 -47.5q-29 -30 -47 -70t-18 -86q0 -45 18 -85.5t47 -69.5v0zM512 395q-29 0 -54.5 10.5t-44.5 29.5
@@ -94,7 +80,12 @@ t-28.5 -12l-60 -60q-12 -12 -12 -28.5t12 -28.5v0z"
             />
           </svg>
         </div>
-        <button class="pl-6 pr-6 rounded-full bg-neutral-700/30 text-neutral-400 font-bold tracking-widest" style="font-size: 9px">GİRİŞ YAP</button>
+        <div
+          class="flex items-center justify-center h-8 w-24 rounded-full bg-neutral-700/30 text-neutral-400 font-bold tracking-widest"
+          style="font-size: 9px"
+        >
+          GİRİŞ YAP
+        </div>
       </div>
     </div>
   </header>
