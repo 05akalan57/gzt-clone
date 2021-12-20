@@ -1,11 +1,13 @@
 <template>
+  <Search v-show="searchModal" @close-modal="searchModal = false" />
+  <Login v-show="loginModal" @close-modal="loginModal = false" />
   <header class="fixed bottom-0 left-0 right-0 lg:relative block pl-2 pr-2 xl:pl-0 xl:pr-0 bg-neutral-800 shadow-md h-14">
     <div class="flex h-full max-w-screen-xl mx-auto">
-      <div to="/" class="hidden lg:flex items-center w-60">
+      <div class="hidden lg:flex items-center w-60">
         <img src="https://www.gzt.com/_nuxt/img/gzt-logo.b145d81.svg" alt="logo" class="h-8" />
       </div>
       <nav class="flex mx-auto lg:ml-px space-x-2 text-gray-300">
-        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+        <div class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
           <svg width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M17.0469 19.9922H20.375V11.0391L12.875 5.60156L5.375 11.0391V19.9922H8.70312V16.6641C8.70312 16.1172 8.80859 15.5859 9.01953 15.0703C9.23047 14.5547 9.53125 14.1016 9.92188 13.7109C10.3125 13.3203 10.7656 13.0195 11.2812 12.8086C11.7969 12.5977 12.3281 12.4922 12.875 12.4922C13.4219 12.4922 13.9531 12.5977 14.4688 12.8086C14.9844 13.0195 15.4375 13.3203 15.8281 13.7109C16.2188 14.1016 16.5195 14.5547 16.7305 15.0703C16.9414 15.5859 17.0469 16.1172 17.0469 16.6641V19.9922ZM2.86719 10.2891C2.86719 10.1172 2.90625 9.96094 2.98438 9.82031C3.0625 9.67969 3.16406 9.5625 3.28906 9.46875L12.2891 2.92969C12.4609 2.80469 12.6562 2.74219 12.875 2.74219C13.0938 2.74219 13.2891 2.80469 13.4609 2.92969L22.4609 9.46875C22.5859 9.5625 22.6875 9.67969 22.7656 9.82031C22.8438 9.96094 22.8828 10.1172 22.8828 10.2891V21.4922C22.8828 21.7734 22.7852 22.0117 22.5898 22.207C22.3945 22.4023 22.1562 22.5 21.875 22.5H14.5391V16.6641C14.5391 16.4453 14.4961 16.2344 14.4102 16.0312C14.3242 15.8281 14.2031 15.6484 14.0469 15.4922C13.8906 15.3359 13.7109 15.2148 13.5078 15.1289C13.3047 15.043 13.0938 15 12.875 15C12.6562 15 12.4453 15.043 12.2422 15.1289C12.0391 15.2148 11.8594 15.3359 11.7031 15.4922C11.5469 15.6484 11.4258 15.8281 11.3398 16.0312C11.2539 16.2344 11.2109 16.4453 11.2109 16.6641V22.5H3.875C3.59375 22.5 3.35547 22.4023 3.16016 22.207C2.96484 22.0117 2.86719 21.7734 2.86719 21.4922V10.2891Z"
@@ -13,7 +15,10 @@
             />
           </svg>
         </div>
-        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+        <div
+          @click="searchModal = true"
+          class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 cursor-pointer"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-6">
             <path
               fill="currentColor"
@@ -22,7 +27,7 @@ q-50 37 -111 58.5t-128 21.5q-82 0 -154 -31t-125.5 -84.5t-84.5 -125.5t-31 -154q0 
             />
           </svg>
         </div>
-        <div to="/" class="flex justify-center items-center w-20 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+        <div class="flex justify-center items-center w-20 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-11 0 1301 1024" class="h-6">
             <path
               fill="currentColor"
@@ -34,7 +39,7 @@ t63 27q26 8 56 11t58 0q45 -4 86 -23q41 -18 74 -47t56 -68t34 -85q5 -19 6.5 -33t1.
             />
           </svg>
         </div>
-        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+        <div class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 962 1024" class="h-6">
             <path
               fill="currentColor"
@@ -47,7 +52,10 @@ q4 4 8 6.5t10 4.5l4 2h157h135.5t25.5 -1q20 -6 28 -23.5t0 -35.5q-4 -8 -12.5 -15t-
             />
           </svg>
         </div>
-        <div to="/" class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400">
+        <div
+          @click="loginModal = true"
+          class="flex justify-center items-center w-16 border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 cursor-pointer"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 0 1034 1024" class="h-6">
             <path
               fill="currentColor"
@@ -81,7 +89,8 @@ t-28.5 -12l-60 -60q-12 -12 -12 -28.5t12 -28.5v0z"
           </svg>
         </div>
         <div
-          class="flex items-center justify-center h-8 w-24 rounded-full bg-neutral-700/30 text-neutral-400 font-bold tracking-widest"
+          @click="loginModal = true"
+          class="flex items-center justify-center h-8 w-24 rounded-full bg-neutral-700/30 text-neutral-400 font-bold tracking-widest cursor-pointer"
           style="font-size: 9px"
         >
           GİRİŞ YAP
@@ -96,6 +105,8 @@ export default {
   data() {
     return {
       darkMode: true,
+      searchModal: false,
+      loginModal: false,
     }
   },
 }
