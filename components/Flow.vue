@@ -15,12 +15,14 @@
           />
         </svg>
       </div>
-      <img :src="post.image" class="w-full object-cover" />
+      <a :href="post.title">
+        <img :src="post.image" class="w-full object-cover" />
+      </a>
       <div class="p-6 space-y-2 border-b border-neutral-700">
-        <h3 class="text-2xl font-bold text-neutral-200">{{ post.title }}</h3>
-        <p class="font-bold text-neutral-400 line-clamp-4">
+        <a :href="post.title" class="text-2xl font-bold text-neutral-200">{{ post.title }}</a>
+        <a :href="post.title" class="font-bold text-neutral-400 line-clamp-4">
           {{ post.summary }}
-        </p>
+        </a>
         <div class="mt-4 text-xs font-bold text-neutral-500">4 saat önce</div>
       </div>
       <div class="pl-6 pr-6 pt-4 pb-4 space-y-4 font-bold text-xs text-neutral-400" style="font-size: 11px">
