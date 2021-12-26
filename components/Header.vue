@@ -1,6 +1,10 @@
 <template>
-  <Search v-show="searchModal" @close-modal="searchModal = false" />
-  <Login v-show="loginModal" @close-modal="loginModal = false" />
+  <transition name="fade">
+    <Search v-if="searchModal" @close-modal="searchModal = false" />
+  </transition>
+  <transition name="fade">
+    <Login v-if="loginModal" @close-modal="loginModal = false" />
+  </transition>
   <header class="fixed bottom-0 left-0 right-0 lg:relative block pl-2 pr-2 xl:pl-0 xl:pr-0 bg-neutral-800 shadow-md h-14">
     <div class="flex h-full max-w-screen-xl mx-auto">
       <div class="hidden lg:flex items-center w-60">
@@ -99,6 +103,15 @@ t-28.5 -12l-60 -60q-12 -12 -12 -28.5t12 -28.5v0z"
     </div>
   </header>
 </template>
+
+<style>
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
 
 <script>
 export default {

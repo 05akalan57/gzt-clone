@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center fixed left-0 right-0 top-0 bottom-0 bg-black bg-opacity-50 z-20">
     <div
-      class="relative flex items-center justify-center mr-2 ml-2 text-white text-2xl bg-neutral-800 max-w-xl w-full max-h-96 h-full border border-neutral-700 rounded-md"
+      class="relative flex items-center justify-center text-white text-2xl bg-neutral-800 sm:max-w-xl w-full sm:max-h-96 h-full sm:border border-neutral-700 sm:rounded-md"
     >
       <h3>GİRİŞ YAP</h3>
       <svg
